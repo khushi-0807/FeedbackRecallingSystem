@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function HomeNav() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/Login");
+  };
+
   return (
     <div className=" container p-2 ">
       {/* <header>
@@ -346,7 +352,9 @@ function HomeNav() {
               </li>
             </ul> */}
             <div class="d-lg-flex col-lg-3 justify-content-lg-end ">
-              <button class="btn btn-primary">Log In</button>
+              <button class="btn btn-primary" onClick={handleClick}>
+                Log In
+              </button>
             </div>
           </div>
         </div>

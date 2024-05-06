@@ -27,9 +27,9 @@ function SelectFeedback() {
           <h2 class="fw-normal ">Product Feedback</h2>
           <p></p>
           <p>
-            <a class="btn btn-secondary" href="#">
+            <button class="btn btn-secondary" onclick=" ">
               Feedback »
-            </a>
+            </button>
           </p>
         </div>
         <div class="col-lg-4">
@@ -51,9 +51,9 @@ function SelectFeedback() {
           <h2 class="fw-normal">User Feedback</h2>
           <p></p>
           <p>
-            <a class="btn btn-secondary" href="#">
+            <button class="btn btn-secondary" onclick="  ">
               Feedback »
-            </a>
+            </button>
           </p>
         </div>
         <div class="col-lg-4">
@@ -75,9 +75,9 @@ function SelectFeedback() {
           <h2 class="fw-normal">Training Feedback</h2>
           <p></p>
           <p>
-            <a class="btn btn-secondary" href="#">
+            <button class="btn btn-secondary" onclick="  ">
               Feedback »
-            </a>
+            </button>
           </p>
         </div>
         <div class="col-lg-4">
@@ -99,9 +99,9 @@ function SelectFeedback() {
           <h2 class="fw-normal">Session Feedback</h2>
           <p></p>
           <p>
-            <a class="btn btn-secondary " href="#">
+            <button class="btn btn-secondary" onclick=" ">
               Feedback »
-            </a>
+            </button>
           </p>
         </div>
         <div class="col-lg-4">
@@ -123,9 +123,9 @@ function SelectFeedback() {
           <h2 class="fw-normal">Suggestion Feedback</h2>
           <p></p>
           <p>
-            <a class="btn btn-secondary" href="#">
+            <button class="btn btn-secondary" onclick=" ">
               Feedback »
-            </a>
+            </button>
           </p>
         </div>
         <div class="col-lg-4">
@@ -147,9 +147,9 @@ function SelectFeedback() {
           <h2 class="fw-normal">Query Feedback</h2>
           <p></p>
           <p>
-            <a class="btn btn-secondary" href="#">
+            <button class="btn btn-secondary" onclick=" ">
               Feedback »
-            </a>
+            </button>
           </p>
         </div>
       </div>
