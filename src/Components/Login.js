@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import HomeNav from "./HomeNav";
+import { useNavigate } from "react-router";
 
 function Login() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/LoginAsUser");
+  };
+  const handleClik = () => {
+    navigate("/LoginAsAdmin");
+  };
   return (
     <>
       <HomeNav />
@@ -69,7 +77,12 @@ function Login() {
             <br />
 
             <small class="text-black">
-              Do not have an account? <a href="/SignIn">Sign In</a>
+              Do not have an account?
+              <br />{" "}
+              <button onClick={handleClick} class="mx-2">
+                Sign In as User
+              </button>
+              <button onClick={handleClik}>Sign In as Admin</button>
             </small>
             <p class="mt-2 mb-2 text-black justify-content-center border-left">
               or connect with

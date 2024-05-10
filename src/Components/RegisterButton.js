@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function RegisterButton() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/LoginAsUser");
+  };
+  const handleClik = () => {
+    navigate("/LoginAsAdmin");
+  };
   return (
     <>
       <div class=" mx-auto">
@@ -17,12 +25,14 @@ function RegisterButton() {
           <button
             type="button"
             class="btn btn-primary btn-outline-secondary text-white btn-lg px-5  py-3 me-sm-3"
+            onClick={handleClick}
           >
             For User
           </button>
           <button
             type="button"
             class="btn btn-primary text-white btn-outline-secondary btn-lg px-5 py-3"
+            onClick={handleClik}
           >
             For Admin
           </button>

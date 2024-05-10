@@ -1,6 +1,23 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function SelectFeedback() {
+  const navigate = useNavigate();
+  const ProducthandleClick = () => {
+    navigate("/ProductFeedbackQuiz");
+  };
+  const QueryhandleClick = () => {
+    navigate("/QueryFeedback");
+  };
+  const TraininghandleClick = () => {
+    navigate("/TrainingFeedback");
+  };
+  const SuggestionhandleClick = () => {
+    navigate("/SuggestionFeedback");
+  };
+  const SessionhandleClick = () => {
+    navigate("/SessionFeedback");
+  };
   return (
     <div className="container">
       <h2 class="pb-2 border-dark border-bottom display-5 fw-bold text-center mb-4">
@@ -27,7 +44,7 @@ function SelectFeedback() {
           <h2 class="fw-normal ">Product Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onclick=" ">
+            <button class="btn btn-secondary" onClick={ProducthandleClick}>
               Feedback »
             </button>
           </p>
@@ -75,7 +92,7 @@ function SelectFeedback() {
           <h2 class="fw-normal">Training Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onclick="  ">
+            <button class="btn btn-secondary" onClick={TraininghandleClick}>
               Feedback »
             </button>
           </p>
@@ -99,7 +116,7 @@ function SelectFeedback() {
           <h2 class="fw-normal">Session Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onclick=" ">
+            <button class="btn btn-secondary" onClick={SessionhandleClick}>
               Feedback »
             </button>
           </p>
@@ -123,7 +140,7 @@ function SelectFeedback() {
           <h2 class="fw-normal">Suggestion Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onclick=" ">
+            <button class="btn btn-secondary" onClick={SuggestionhandleClick}>
               Feedback »
             </button>
           </p>
@@ -147,7 +164,7 @@ function SelectFeedback() {
           <h2 class="fw-normal">Query Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onclick=" ">
+            <button class="btn btn-secondary" onClick={QueryhandleClick}>
               Feedback »
             </button>
           </p>
