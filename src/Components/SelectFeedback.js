@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router";
 
 function SelectFeedback() {
@@ -18,6 +19,9 @@ function SelectFeedback() {
   const SessionhandleClick = () => {
     navigate("/SessionFeedback");
   };
+  // const UserhandleClick = () => {
+  //   navigate("/UserFeedback");
+  // };
   return (
     <div className="container">
       <h2 class="pb-2 border-dark border-bottom display-5 fw-bold text-center mb-4">
@@ -68,9 +72,11 @@ function SelectFeedback() {
           <h2 class="fw-normal">User Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onclick="  ">
-              Feedback »
+          <Link to="/UserFeedback">
+            <button class="btn btn-secondary">
+              Feedback » 
             </button>
+          </Link>
           </p>
         </div>
         <div class="col-lg-4">
