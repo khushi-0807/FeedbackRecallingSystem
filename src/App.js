@@ -11,6 +11,7 @@ import QueryFeedback from "./Components/QueryFeedback";
 import TrainingFeedback from "./Components/TrainingFeedback";
 import SuggestionFeedback from "./Components/SuggestionFeedback";
 import SessionFeedback from "./Components/SessionFeedback";
+import AdminLAndingPage from "./Components/AdminLAndingPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/SessionFeedback" element={<SessionFeedback />} />
       </Routes>
     </Router>
+    // <AdminLAndingPage />
   );
 }
 
