@@ -156,7 +156,6 @@ function AdminNav() {
           </ul>
         </div>
       </div>
-      <AdminRightPart />
     </div>
   );
 }

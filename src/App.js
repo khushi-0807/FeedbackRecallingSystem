@@ -12,6 +12,7 @@ import TrainingFeedback from "./Components/TrainingFeedback";
 import SuggestionFeedback from "./Components/SuggestionFeedback";
 import SessionFeedback from "./Components/SessionFeedback";
 import AdminLAndingPage from "./Components/AdminLAndingPage";
+import LoginAsAdmin from "./Components/LoginAsAdmin";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/LoginAsUser" element={<LoginAsUser />} />
-        <Route path="/LoginAsAdmin" element={<LoginAsUser />} />
+        <Route path="/LoginAsAdmin" element={<LoginAsAdmin />} />
 
         <Route path="/ProductFeedbackQuiz" element={<ProductFeedbackQuiz />} />
         <Route path="/UserFeedback" element={<UserFeedback />} />
@@ -28,9 +29,9 @@ function App() {
         <Route path="/TrainingFeedback" element={<TrainingFeedback />} />
         <Route path="/SuggestionFeedback" element={<SuggestionFeedback />} />
         <Route path="/SessionFeedback" element={<SessionFeedback />} />
+        <Route path="/AdminLAndingPage" element={<AdminLAndingPage />} />
       </Routes>
     </Router>
-    // <AdminLAndingPage />
   );
 }
 

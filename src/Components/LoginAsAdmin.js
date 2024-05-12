@@ -1,11 +1,11 @@
 import React from "react";
-import HomeNav from "./HomeNav";
 import { useNavigate } from "react-router";
+import HomeNav from "./HomeNav";
 
-function LoginAsUser() {
+function LoginAsAdmin() {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/");
+    navigate("/AdminLAndingPage");
   };
   return (
     <>
@@ -13,17 +13,6 @@ function LoginAsUser() {
       <div class="container col-xl-10 col-xxl-8 px-4 py-1">
         <div class="row align-items-center g-lg-5">
           <div class="col-lg-7 text-center text-lg-start">
-            {/* <h1 class="display-5 fw-bold lh-1 text-body-emphasis mb-3 border-bottom border-black border-2">
-              Feedback Revolution!
-            </h1>
-            <p class="col-lg-10 fs-4">
-              "Welcome to our feedback collection platform! We're thrilled to
-              invite you to join our community and share your valuable insights.
-              By signing up, you'll gain access to a wealth of opportunities to
-              make your voice heard and help shape the future of our website.
-              Your feedback is essential to us . Join us today and be part of
-              the journey towards innovation and excellence!"
-            </p> */}
             <img src="./assets/feedback3.webp"></img>
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
@@ -103,4 +92,4 @@ function LoginAsUser() {
   );
 }
 
-export default LoginAsUser;
+export default LoginAsAdmin;

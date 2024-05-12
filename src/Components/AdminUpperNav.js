@@ -1,4 +1,5 @@
 import React from "react";
+import AdminRightPart from "./AdminRightPart";
 
 function AdminUpperNav() {
   return (
@@ -79,6 +80,7 @@ function AdminUpperNav() {
             </div>
           </div>
         </nav>
+        <AdminRightPart />
       </div>
     </>
   );

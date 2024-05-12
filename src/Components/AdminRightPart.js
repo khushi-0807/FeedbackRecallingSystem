@@ -5,7 +5,6 @@ import AdminMiddle from "./AdminMiddle";
 function AdminRightPart() {
   return (
     <>
-      <AdminUpperNav />
       <AdminMiddle />
     </>
   );
