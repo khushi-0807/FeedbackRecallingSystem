@@ -1,0 +1,11 @@
+
+  .btn-success {
+    font-family: "Times New Roman", Times, serif;
+    transition: 0.5s ease;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .font-weight-bold{
+    font-weight: bold;
+  }

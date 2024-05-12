@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import LoginAsUser from "./Components/LoginAsUser";
-import ProductFeedback from "./Components/ProductFeedback";
-
+// import ProductFeedback from "./Components/ProductFeedback";
+import UserFeedback from "./Components/UserFeedback";
 import ProductFeedbackQuiz from "./Components/ProductFeedbackQuiz";
 import QueryFeedback from "./Components/QueryFeedback";
 import TrainingFeedback from "./Components/TrainingFeedback";
@@ -23,6 +23,7 @@ function App() {
         <Route path="/LoginAsAdmin" element={<LoginAsUser />} />
 
         <Route path="/ProductFeedbackQuiz" element={<ProductFeedbackQuiz />} />
+        <Route path="/UserFeedback" element={<UserFeedback />} />
         <Route path="/QueryFeedback" element={<QueryFeedback />} />
         <Route path="/TrainingFeedback" element={<TrainingFeedback />} />
         <Route path="/SuggestionFeedback" element={<SuggestionFeedback />} />
