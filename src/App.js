@@ -13,6 +13,7 @@ import SuggestionFeedback from "./Components/SuggestionFeedback";
 // import SessionFeedback from "./Components/SessionFeedback";
 import AdminLAndingPage from "./Components/AdminLAndingPage";
 import LoginAsAdmin from "./Components/LoginAsAdmin";
+import UserResponseTable from "./Components/UserResponseTable";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/SuggestionFeedback" element={<SuggestionFeedback />} />
         {/* <Route path="/SessionFeedback" element={<SessionFeedback />} /> */}
         <Route path="/AdminLAndingPage" element={<AdminLAndingPage />} />
+        <Route path="/UserResponseTable" element={<UserResponseTable />} />
       </Routes>
     </Router>
   );

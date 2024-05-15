@@ -23,6 +23,38 @@ function ProductFeedbackQuiz() {
             Product Feedback
           </h1>
         </div>
+        <div class="col-lg-8 mx-auto mb-4">
+          <div class="d-flex     ">
+            <div class="mx-5">
+              <label class="blockquote m-2 mx-2 fw-bold">Name</label>
+              <div class="d-flex ">
+                <input
+                  type="text"
+                  class="form-control border border-black border-1 mx-1 px-4 py-3"
+                  id="floatingInput"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  class="form-control border border-black border-1 mx-2"
+                  id="floatingInput"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="blockquote m-2 mx-2 fw-bold">Email</label>
+              <div>
+                <input
+                  type="text"
+                  class="form-control border border-black border-1 mx-1 px-4 py-3"
+                  id="floatingInput"
+                  placeholder="abc@gmail"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container mt-2">
           <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg border border-black border-3">
             <div class=" p-3 p-lg-5 pt-lg-3">

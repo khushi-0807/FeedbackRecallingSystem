@@ -4,7 +4,7 @@ import AdminRightPart from "./AdminRightPart";
 
 function AdminNav() {
   return (
-    <div class="d-flex ">
+    <div class="d-flex sticky-top h-100">
       <div
         class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark vh-100"
         style={{ width: "280px" }}

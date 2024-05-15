@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 
 function SelectFeedback() {
@@ -24,11 +24,11 @@ function SelectFeedback() {
   // };
   return (
     <div className="container">
-      <h2 class="pb-2 border-dark border-bottom display-5 fw-bold text-center mb-4">
+      <h2 class="pb-2 border-dark border-bottom display-5 fw-bold text-center mb-5">
         Speak Up: Your Feedback Drives Our Progress!
       </h2>
       <div class="row ">
-        {/* <div class="col-lg-4 ">
+        <div class="col-lg-4 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -48,11 +48,11 @@ function SelectFeedback() {
           <h2 class="fw-normal ">Product Feedback</h2>
           <p></p>
           <p>
-            <button class="btn btn-secondary" onClick={ProducthandleClick}>
+            <button class="btn btn-secondary" onClick="">
               Feedback »
             </button>
           </p>
-        </div> */}
+        </div>
         {/* <div class="col-lg-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"

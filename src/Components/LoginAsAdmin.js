@@ -12,27 +12,28 @@ function LoginAsAdmin() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     try {
-
-      const response = await Axios.post("http://localhost:3000/auth/authAdmin/signup", {
-        name,
-        email,
-        password,
-        confirmPassword
-      }).then((res) => {
-       
+      const response = await Axios.post(
+        "http://localhost:3000/auth/authAdmin/signup",
+        {
+          name,
+          email,
+          password,
+          confirmPassword,
+        }
+      ).then((res) => {
         if (res.data.success) {
           localStorage.setItem("token", res.data.token);
           navigate("/AdminLAndingPage");
         } else {
-          console.log(res.data.message)
+          console.log(res.data.message);
         }
       });
       console.log(response.data);
     } catch (error) {
-      console.error("Error:", error); 
+      console.error("Error:", error);
     }
   };
 
@@ -47,7 +48,7 @@ function LoginAsAdmin() {
           <div className="col-md-10 mx-auto col-lg-5">
             <form
               className="p-4 p-md-5 border border-black border-2 rounded-3 bg-body-tertiary"
-              onSubmit={handleSubmit} 
+              onSubmit={handleSubmit}
             >
               <div className="form-floating mb-3">
                 <input
@@ -105,7 +106,9 @@ function LoginAsAdmin() {
               <button className="w-100 btn btn-lg btn-primary" type="submit">
                 Sign up
               </button>
-              <a href="/Login">Login</a>
+              <p class="my-3 text-center">
+                Already have an account? <a href="/Login">Login</a>
+              </p>
             </form>
           </div>
         </div>
