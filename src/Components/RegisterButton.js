@@ -22,13 +22,13 @@ function RegisterButton() {
           communication and continuous evolution.
         </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <button
+          {/* <button
             type="button"
             class="btn btn-primary btn-outline-secondary text-white btn-lg px-5  py-3 me-sm-3"
             onClick={handleClick}
           >
             For User
-          </button>
+          </button> */}
           <button
             type="button"
             class="btn btn-primary text-white btn-outline-secondary btn-lg px-5 py-3"

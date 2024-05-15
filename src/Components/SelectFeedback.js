@@ -4,21 +4,21 @@ import { useNavigate } from "react-router";
 
 function SelectFeedback() {
   const navigate = useNavigate();
-  const ProducthandleClick = () => {
-    navigate("/ProductFeedbackQuiz");
-  };
+  // const ProducthandleClick = () => {
+  //   navigate("/ProductFeedbackQuiz");
+  // };
   const QueryhandleClick = () => {
     navigate("/QueryFeedback");
   };
-  const TraininghandleClick = () => {
-    navigate("/TrainingFeedback");
-  };
+  // const TraininghandleClick = () => {
+  //   navigate("/TrainingFeedback");
+  // };
   const SuggestionhandleClick = () => {
     navigate("/SuggestionFeedback");
   };
-  const SessionhandleClick = () => {
-    navigate("/SessionFeedback");
-  };
+  // const SessionhandleClick = () => {
+  //   navigate("/SessionFeedback");
+  // };
   // const UserhandleClick = () => {
   //   navigate("/UserFeedback");
   // };
@@ -28,7 +28,7 @@ function SelectFeedback() {
         Speak Up: Your Feedback Drives Our Progress!
       </h2>
       <div class="row ">
-        <div class="col-lg-4 ">
+        {/* <div class="col-lg-4 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -52,8 +52,8 @@ function SelectFeedback() {
               Feedback »
             </button>
           </p>
-        </div>
-        <div class="col-lg-4">
+        </div> */}
+        {/* <div class="col-lg-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -78,8 +78,8 @@ function SelectFeedback() {
             </button>
           </Link>
           </p>
-        </div>
-        <div class="col-lg-4">
+        </div> */}
+        {/* <div class="col-lg-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -102,8 +102,8 @@ function SelectFeedback() {
               Feedback »
             </button>
           </p>
-        </div>
-        <div class="col-lg-4">
+        </div> */}
+        {/* <div class="col-lg-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -126,7 +126,7 @@ function SelectFeedback() {
               Feedback »
             </button>
           </p>
-        </div>
+        </div> */}
         <div class="col-lg-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"

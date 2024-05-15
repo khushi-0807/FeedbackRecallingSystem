@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 function QueryFeedback() {
   // State hooks to manage form data
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [query, setQuery] = useState("");
+
+  const navigate = useNavigate();
 
   // Function to handle form submission
   const handleSubmit = async (event) => {
@@ -17,12 +20,14 @@ function QueryFeedback() {
         name: name,
         email: email,
         query: query
+      }).then((res)=>{
+        navigate('/');
       });
       // Clear form fields after successful submission
       setName("");
       setEmail("");
       setQuery("");
-      alert("Query submitted successfully!");
+      alert("Feedback submitted successfully!");
     } catch (error) {
       console.error("Error submitting query:", error);
       alert("Error submitting query. Please try again later.");

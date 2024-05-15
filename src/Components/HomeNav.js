@@ -172,7 +172,7 @@ function HomeNav() {
               </svg>
             </div>
             &nbsp;
-            <a class="navbar-brand col-lg-3 me-0 text-white fw-bold" href="#">
+            <a href="/" class="navbar-brand col-lg-3 me-0 text-white fw-bold">
               Feedback
             </a>
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">

@@ -1,24 +1,40 @@
 import React, { useState } from "react";
 import HomeNav from "./HomeNav";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
+import Axios from "axios";
 
 function Login() {
+
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/LoginAsUser");
-  };
-  const handleClik = () => {
-    navigate("/LoginAsAdmin");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+    console.log(email, password)
+    try {
+
+      const response = await Axios.post("http://localhost:3000/auth/authAdmin/signin", {
+        email,
+        password
+      }).then((res) => {
+       
+        if (res.data.success) {
+          localStorage.setItem("token", res.data.token);
+          navigate("/AdminLAndingPage");
+        } else {
+          console.log(res.data.message)
+        }
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error:", error); 
+    }
   };
   return (
     <>
       <HomeNav />
-      <body class="text-center ">
-        <form
-          class="form-signin my-5 mx-5 p-md-3 border rounded-5 border-black border-4 bg-body-secondnary"
-          method="POST"
-          action="http://localhost:5000/Login"
-        >
+      <body class="text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100"
@@ -34,94 +50,47 @@ function Login() {
             />
           </svg>
           <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
-          <div class="col-md-10 mx-auto col-lg-5">
-            <div class="form-floating mb-3 border-black">
-              <input
-                type="email"
-                name="email"
-                class="form-control border-black border-2"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="password"
-                name="password"
-                class="form-control border-black border-2"
-                id="floatingPassword"
-                placeholder="Password"
-              />
-              <label for="floatingPassword">Password</label>
-            </div>
-            <div class="checkbox mb-3 justify-content-ends">
-              <label>
-                <input type="checkbox" value="remember-me" /> Remember me
-              </label>
-              <br />
-              <label>
-                <a href="">Forget password?</a>
-              </label>
-            </div>
-            <button class="w-50 btn btn-lg btn-primary" type="submit">
-              {/* <a
-              href="/SecondPage"
-              class="w-50 btn btn-lg btn-primary"
-              type="submit"
-            > */}
-              Login
-              {/* </a> */}
-            </button>
-            <br />
-            <br />
-
-            <small class="text-black">
-              Do not have an account?
-              <br />{" "}
-              <button onClick={handleClick} class="mx-2">
-                Sign In as User
+          <div className="col-md-10 mx-auto col-lg-5">
+            <form
+              className="p-4 p-md-5 border border-black border-2 rounded-3 bg-body-tertiary"
+              onSubmit={handleSubmit} 
+            >
+              
+              <div className="form-floating mb-3">
+                <input
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  type="email"
+                  className="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label htmlFor="floatingInput">Email address</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  type="password"
+                  className="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label htmlFor="floatingPassword">Password</label>
+              </div>
+              {/* <div className="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me" /> Remember me
+                </label>
+              </div> */}
+              <button className="w-100 btn btn-lg btn-primary" type="submit">
+                Login 
               </button>
-              <button onClick={handleClik}>Sign In as Admin</button>
-            </small>
-            <p class="mt-2 mb-2 text-black justify-content-center border-left">
-              or connect with
-            </p>
+              <a href="/LoginAsAdmin">Sign up</a>
+            </form>
           </div>
-          <div>
-            <ul class="list-unstyled d-flex justify-content-center">
-              <li class="ms-3">
-                <a class="link-dark" href="#">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-google"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
-                  </svg>
-                </a>
-              </li>
-
-              <li class="ms-3">
-                <a class="link-dark" href="#">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-facebook"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </form>
       </body>
     </>
   );

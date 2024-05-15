@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 function SuggestionFeedback() {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ function SuggestionFeedback() {
     improvementAction: "",
     receiveResponse: ""
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,8 +51,10 @@ function SuggestionFeedback() {
         improvementAction:formData.improvementAction,
         receiveResponse:formData.receiveResponse
       }).then((res)=>{
+        navigate('/');
         console.log(res);
       });
+      alert("Feedback submitted successfully!");
       // Reset form after successful submission
       setFormData({
         firstName: "",
