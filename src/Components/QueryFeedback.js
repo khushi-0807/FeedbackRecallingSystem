@@ -16,7 +16,7 @@ function QueryFeedback() {
     try {
       // Send data to backend using Axios POST request
       console.log(name, email, query);
-      await axios.post("http://localhost:3000/auth/query", {
+      await axios.post("http://localhost:5000/auth/query", {
         name: name,
         email: email,
         query: query

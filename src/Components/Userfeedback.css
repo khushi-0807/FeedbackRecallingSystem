@@ -9,3 +9,7 @@
   .font-weight-bold{
     font-weight: bold;
   }
+  .th-dark{
+    background-color: black;
+    color: aliceblue;
+  }

@@ -16,7 +16,7 @@ function LoginAsAdmin() {
 
     try {
       const response = await Axios.post(
-        "http://localhost:3000/auth/authAdmin/signup",
+        "http://localhost:5000/auth/authAdmin/signup",
         {
           name,
           email,

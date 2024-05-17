@@ -177,7 +177,7 @@ function HomeNav() {
             </a>
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="./" class="nav-link text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
