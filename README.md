@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/df7eac147767277.62c848d68fa9d.gif" alt="logotype" width="100%"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Feedback Collection System 📋✨
 
-## Available Scripts
+Welcome to the Feedback Collection System! This project is built using the MERN stack (MongoDB, Express, React, Node.js) and allows users to submit various types of feedback. Administrators have the ability to view all submitted feedback.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contributors](#contributors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features ✨
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Multi-Type Feedback Forms**: Users can submit different types of feedback such as suggestions, user feedback, and queries.
+- **User Roles**: Two types of users - Normal Users (who can submit feedback) and Admins (who can view all feedback).
+- **Authentication**: User Authentication using JWT.
+- **RESTful API**: Backend built with Express.js to handle feedback data.
+- **Modern Frontend**: Frontend built with React.js to provide a dynamic and responsive user experience.
+- **Database**: MongoDB is used to store feedback data.
 
-### `npm test`
+## Installation 🛠️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to get the project up and running on your local machine.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- MongoDB
+- Mongoose
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/khushi-0807/FeedbackRecallingSystem.git
+    ```
+2. Navigate to the `backend` directory:
+    ```bash
+    cd feedback-collection-system/backend
+    ```
+3. Install backend dependencies:
+    ```bash
+    npm install
+    ```
+4. Create a `.env` file in the `backend` directory and add your MongoDB connection string:
+    ```env
+    MONGO_URI=**************************
+    ```
+5. Start the backend server:
+    ```bash
+    npm run dev
+    ```
+    The backend server will run on port 5000.
 
-### `npm run eject`
+### Frontend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Navigate to the root project directory:
+    ```bash
+    cd ../
+    ```
+2. Install frontend dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the frontend server:
+    ```bash
+    npm start
+    ```
+    The frontend server will run on port 3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage 🚀
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### For Normal Users
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Access the application via `http://localhost:3000`.
+- Select the type of feedback you want to submit (Suggestion, User Feedback, Query, etc.).
+- Fill out the feedback form and submit.
 
-## Learn More
+### For Admins
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Access the admin dashboard via `http://localhost:3000/admin`.
+- View all submitted feedback in a consolidated view.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure 🗂️
 
-### Code Splitting
+```
+feedback-collection-system/
+├── backend/
+│ ├── models/
+│ ├── routes/
+│ ├── controllers/
+│ ├── app.js
+│ └── server.js
+├── public/
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── App.js
+│ ├── index.js
+├── .env
+├── package.json
+└── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+## API Endpoints 🌐
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Feedback Endpoints
 
-### Making a Progressive Web App
+- **POST /api/feedback**: Submit feedback
+- **GET /api/feedback**: Get all feedback (Admin only)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### User Endpoints
 
-### Advanced Configuration
+- **POST /api/users/login**: Login user
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used 💻
 
-### Deployment
+- **Frontend**: React.js, Axios
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB, Mongoose
+- **Authentication**: JWT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing 🤝
 
-### `npm run build` fails to minify
+Contributions are welcome! Please fork this repository and submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License 📄
+
+This project is licensed under the MIT License.
+
+## Contributors 👥
+
+- Rohit Tanwar
+- Aryam
+- Hritik
+
+---
+
+Made with ❤️ by Khushi Mishra    #Zidio Development
